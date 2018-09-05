@@ -6,9 +6,9 @@ import "fmt"
 // Function that is run when main is run.
 func main() {
 	// Creates a dynamic sized array(SLICE) of strings
-	cards := []string{newCard(), newCard()}
+	cards := deck{newCard(), newCard()}
 	// creates a new array with the new card appended to the cards array
-	cards = append(cards, newCard())
+	cards = append(cards, "Six of diamonds")
 
 	// Loops through each element in the cards array as card
 	for i, card := range cards {

@@ -1,8 +1,6 @@
 // Tells that this is an exacutable file
 package main
 
-import "fmt"
-
 // Function that is run when main is run.
 func main() {
 	// Creates a dynamic sized array(SLICE) of strings
@@ -10,10 +8,8 @@ func main() {
 	// creates a new array with the new card appended to the cards array
 	cards = append(cards, "Six of diamonds")
 
-	// Loops through each element in the cards array as card
-	for i, card := range cards {
-		fmt.Println(i, card)
-	}
+	// calls the print method on the cards deck
+	cards.print()
 }
 
 // Defines a function that returns a string

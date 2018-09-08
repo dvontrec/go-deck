@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 // Create a new type of deck that is a slica of strings
 type deck []string
@@ -34,4 +37,10 @@ func deal(d deck, handSize int) (deck, deck) {
 	// Returns everything from the start of the deck to the handsize and return the deck with the handsized deck taken away
 	return d[:handSize], d[handSize:]
 
+}
+
+// Creates a deck method that returns the dec as a string
+func (d deck) toString() string {
+	// converts deck into a string slice then joins each elemant by a comma into one string.
+	return strings.Join([]string(d), ",")
 }

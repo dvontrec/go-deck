@@ -4,8 +4,6 @@ package main
 // Function that is run when main is run.
 func main() {
 	// Creates a dynamic sized array(SLICE) of strings
-	cards := newDeck()
-
-	// saves the deck to the harddrive
-	cards.saveToFile("mycards")
+	cards := newDeckFromFile("mycards")
+	cards.print()
 }

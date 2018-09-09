@@ -4,6 +4,7 @@ package main
 // Function that is run when main is run.
 func main() {
 	// Creates a dynamic sized array(SLICE) of strings
-	cards := newDeckFromFile("mycards")
+	cards := newDeck()
+	cards.shuffle()
 	cards.print()
 }
